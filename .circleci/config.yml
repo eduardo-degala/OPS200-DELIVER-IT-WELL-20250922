@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: cimg/node:20.11.0
     environment:
-      VERCEL_ORG_ID: $VERCEL_ORG_ID
-      VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
+      VERCEL_ORG_ID: 9s1E5L4aesfUpzWzV4Yg6I0W
+      VERCEL_PROJECT_ID: prj_RN8WKx3miauT0jOiNAfk6Y4msEb9
     steps:
       - checkout
       - run:
@@ -15,8 +15,8 @@ jobs:
           name: Debug Vercel Env Vars
           command: |
             echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}****"
-            echo "VERCEL_ORG_ID is: $VERCEL_ORG_ID"
-            echo "VERCEL_PROJECT_ID is: $VERCEL_PROJECT_ID"
+            echo "VERCEL_ORG_ID is: 9s1E5L4aesfUpzWzV4Yg6I0W"
+            echo "VERCEL_PROJECT_ID is: prj_RN8WKx3miauT0jOiNAfk6Y4msEb9"
       - run:
           name: Install Vercel CLI
           command: sudo npm install --global vercel@latest
@@ -34,8 +34,8 @@ jobs:
     docker:
       - image: cimg/node:20.11.0
     environment:
-      VERCEL_ORG_ID: $VERCEL_ORG_ID
-      VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
+      VERCEL_ORG_ID: 9s1E5L4aesfUpzWzV4Yg6I0W
+      VERCEL_PROJECT_ID: prj_RN8WKx3miauT0jOiNAfk6Y4msEb9
     steps:
       - checkout
       - run:
@@ -45,8 +45,8 @@ jobs:
           name: Debug Vercel Env Vars
           command: |
             echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}****"
-            echo "VERCEL_ORG_ID is: $VERCEL_ORG_ID"
-            echo "VERCEL_PROJECT_ID is: $VERCEL_PROJECT_ID"
+            echo "VERCEL_ORG_ID is: 9s1E5L4aesfUpzWzV4Yg6I0W"
+            echo "VERCEL_PROJECT_ID is: prj_RN8WKx3miauT0jOiNAfk6Y4msEb9"
       - run:
           name: Install Vercel CLI
           command: sudo npm install --global vercel@latest
