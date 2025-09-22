@@ -3,9 +3,6 @@ jobs:
   preview_deployment:
     docker:
       - image: cimg/node:20.11.0
-    environment:
-      VERCEL_ORG_ID: $VERCEL_ORG_ID
-      VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
     steps:
       - checkout
       - run:
@@ -33,9 +30,6 @@ jobs:
   production_deployment:
     docker:
       - image: cimg/node:20.11.0
-    environment:
-      VERCEL_ORG_ID: $VERCEL_ORG_ID
-      VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
     steps:
       - checkout
       - run:
