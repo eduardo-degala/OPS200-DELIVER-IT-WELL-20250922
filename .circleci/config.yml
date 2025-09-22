@@ -25,10 +25,10 @@ jobs:
           command: vercel pull --yes --environment=preview --token=U1kf5GkiYTkEHXHQKxG0ZWGm
       - run:
           name: Build Project Artifacts
-          command: vercel build --token=$VERCEL_TOKEN
+          command: vercel build --token=U1kf5GkiYTkEHXHQKxG0ZWGm
       - run:
           name: Deploy Project Artifacts to Vercel
-          command: vercel deploy --prebuilt --token=$VERCEL_TOKEN
+          command: vercel deploy --prebuilt --token=U1kf5GkiYTkEHXHQKxG0ZWGm
 
   production_deployment:
     docker:
@@ -52,13 +52,13 @@ jobs:
           command: sudo npm install --global vercel@latest
       - run:
           name: Pull Vercel Environment Information
-          command: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+          command: vercel pull --yes --environment=production --token=U1kf5GkiYTkEHXHQKxG0ZWGm
       - run:
           name: Build Project Artifacts
-          command: vercel build --prod --token=$VERCEL_TOKEN
+          command: vercel build --prod --token=U1kf5GkiYTkEHXHQKxG0ZWGm
       - run:
           name: Deploy Project Artifacts to Vercel
-          command: vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+          command: vercel deploy --prebuilt --prod --token=U1kf5GkiYTkEHXHQKxG0ZWGm
 
 workflows:
   version: 2
