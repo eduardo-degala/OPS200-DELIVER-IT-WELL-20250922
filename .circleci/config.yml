@@ -9,6 +9,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Ensure no cached Vercel auth
+          command: rm -rf ~/.vercel
+      - run:
           name: Debug Vercel Env Vars
           command: |
             echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}****"
@@ -35,6 +38,9 @@ jobs:
       VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
     steps:
       - checkout
+      - run:
+          name: Ensure no cached Vercel auth
+          command: rm -rf ~/.vercel
       - run:
           name: Debug Vercel Env Vars
           command: |
