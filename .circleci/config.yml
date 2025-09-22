@@ -9,6 +9,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Debug Vercel Env Vars
+          command: |
+            echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}****"
+            echo "VERCEL_ORG_ID is: $VERCEL_ORG_ID"
+            echo "VERCEL_PROJECT_ID is: $VERCEL_PROJECT_ID"
+      - run:
           name: Install Vercel CLI
           command: sudo npm install --global vercel@latest
       - run:
@@ -29,6 +35,12 @@ jobs:
       VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
     steps:
       - checkout
+      - run:
+          name: Debug Vercel Env Vars
+          command: |
+            echo "VERCEL_TOKEN starts with: ${VERCEL_TOKEN:0:4}****"
+            echo "VERCEL_ORG_ID is: $VERCEL_ORG_ID"
+            echo "VERCEL_PROJECT_ID is: $VERCEL_PROJECT_ID"
       - run:
           name: Install Vercel CLI
           command: sudo npm install --global vercel@latest
